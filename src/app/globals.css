@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #003DA6;
+  --color-primary-dark: #002d7a;
+  --color-primary-light: #1954c4;
+  --color-accent: #19D3C5;
+  --color-accent-light: #3de0d4;
+  --color-accent-dark: #14a89d;
+  --color-dark: #0F0F0F;
+  --color-surface: #f7f8fa;
+  --color-text: #0F0F0F;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+  --font-sans: var(--font-poppins);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-text);
+  font-family: var(--font-poppins), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(0, 61, 166, 0.12);
+}
+
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.section-title {
+  @apply text-2xl font-semibold tracking-tight text-dark md:text-3xl;
+}
+
+.section-divider {
+  @apply mt-4 h-0.5 w-12 rounded-full bg-accent;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-medium text-white transition-all hover:bg-primary-dark hover:shadow-lg hover:shadow-primary/20;
+}
+
+.btn-accent {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-dark transition-all hover:bg-accent-light;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg border border-primary/25 bg-transparent px-6 py-3 text-sm font-medium text-primary transition-colors hover:border-primary hover:bg-primary/5;
+}
+
+.btn-outline-white {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg border border-white/30 px-6 py-3 text-sm font-medium text-white transition-colors hover:border-white/60 hover:bg-white/10;
+}
+
+.card {
+  @apply border border-border bg-white;
+}
+
+.card-hover {
+  @apply transition-all duration-200 hover:border-primary/30 hover:shadow-[0_12px_40px_rgba(0,61,166,0.08)];
+}
+
+.card-premium {
+  @apply border border-border bg-white shadow-[0_8px_32px_rgba(15,15,15,0.08)];
+}
+
+.input-field {
+  @apply w-full rounded-lg border border-border bg-white px-4 py-3 text-sm outline-none transition-colors placeholder:text-text-muted/50 focus:border-primary focus:ring-2 focus:ring-primary/10;
+}
+
+.highlight-box {
+  @apply border-l-4 border-primary bg-surface/80 p-6 md:p-8;
+}
+
+.pattern-dots {
+  background-image: radial-gradient(circle at 1px 1px, rgba(0, 61, 166, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
