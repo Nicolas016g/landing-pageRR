@@ -1,3 +1,4 @@
+import { BackToTop } from "./extras/BackToTop";
 import { StickyCTA } from "./extras/StickyCTA";
 import { WhatsAppButton } from "./extras/WhatsAppButton";
 import { Footer } from "./layout/Footer";
@@ -30,6 +31,7 @@ export function SiteShell() {
         <ContactSection />
       </main>
       <Footer />
+      <BackToTop />
       <WhatsAppButton />
       <StickyCTA />
     </>

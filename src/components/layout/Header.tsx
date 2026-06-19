@@ -14,58 +14,6 @@ const navLinks = [
   { label: "Contato", href: "#contato" },
 ];
 
-function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
-  if (!open) return null;
-
-  return createPortal(
-    <div className="mobile-nav-root lg:hidden" role="dialog" aria-modal="true" aria-label="Menu de navegação">
-      <button type="button" className="mobile-nav-backdrop" onClick={onClose} aria-label="Fechar menu" />
-
-      <aside className="mobile-nav-panel">
-        <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
-          <span className="text-sm font-medium text-white">Menu</span>
-          <button
-            type="button"
-            onClick={onClose}
-            className="flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10"
-            aria-label="Fechar menu"
-          >
-            <X className="h-6 w-6" />
-          </button>
-        </div>
-
-        <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-5">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="rounded-lg px-3 py-3 text-base text-white/90 transition-colors hover:bg-white/10 hover:text-white"
-              onClick={onClose}
-            >
-              {link.label}
-            </a>
-          ))}
-        </nav>
-
-        <div className="shrink-0 border-t border-white/10 p-5">
-          <a
-            href="tel:+5516997818855"
-            className="mb-3 flex items-center gap-2 text-sm text-white/80"
-            onClick={onClose}
-          >
-            <Phone className="h-4 w-4 text-accent" />
-            (16) 99781-8855
-          </a>
-          <a href="#contato-form" className="btn-primary w-full rounded-lg text-center" onClick={onClose}>
-            Solicitar orçamento
-          </a>
-        </div>
-      </aside>
-    </div>,
-    document.body
-  );
-}
-
 export function Header() {
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
@@ -75,29 +23,73 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    const root = document.documentElement;
-    if (open) {
-      document.body.style.overflow = "hidden";
-      root.classList.add("mobile-nav-open");
-    } else {
-      document.body.style.overflow = "";
-      root.classList.remove("mobile-nav-open");
-    }
+    document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
-      root.classList.remove("mobile-nav-open");
     };
   }, [open]);
 
-  useEffect(() => {
-    const onResize = () => {
-      if (window.innerWidth >= 1024) setOpen(false);
-    };
-    window.addEventListener("resize", onResize);
-    return () => window.removeEventListener("resize", onResize);
-  }, []);
-
   const closeMenu = () => setOpen(false);
+
+  const mobileMenu =
+    open && mounted
+      ? createPortal(
+          <div className="fixed inset-0 z-[200] lg:hidden" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+            <button
+              type="button"
+              className="absolute inset-0 bg-black/60"
+              onClick={closeMenu}
+              aria-label="Fechar menu"
+            />
+
+            <div className="absolute right-0 top-0 flex h-full w-[min(100%,18rem)] flex-col bg-dark shadow-2xl">
+              <div className="flex items-center justify-between border-b border-white/10 px-5 py-4">
+                <span className="text-sm font-medium text-white">Menu</span>
+                <button
+                  type="button"
+                  onClick={closeMenu}
+                  className="flex h-10 w-10 items-center justify-center rounded-lg text-white hover:bg-white/10"
+                  aria-label="Fechar menu"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+
+              <nav className="flex flex-1 flex-col gap-1 overflow-y-auto p-5">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="rounded-lg px-3 py-3 text-base text-white/90 transition-colors hover:bg-white/10 hover:text-white"
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </nav>
+
+              <div className="border-t border-white/10 p-5">
+                <a
+                  href="tel:+5516997818855"
+                  className="mb-3 flex items-center gap-2 text-sm text-white/80"
+                  onClick={closeMenu}
+                >
+                  <Phone className="h-4 w-4 text-accent" />
+                  (16) 99781-8855
+                </a>
+                <a
+                  href="#contato-form"
+                  className="btn-primary w-full rounded-lg text-center"
+                  onClick={closeMenu}
+                >
+                  Orçamento
+                </a>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )
+      : null;
 
   return (
     <>
@@ -148,12 +140,12 @@ export function Header() {
             aria-label={open ? "Fechar menu" : "Abrir menu"}
             aria-expanded={open}
           >
-            <Menu className="h-6 w-6" />
+            {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </header>
 
-      {mounted && <MobileNav open={open} onClose={closeMenu} />}
+      {mobileMenu}
     </>
   );
 }

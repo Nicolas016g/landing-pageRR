@@ -74,45 +74,6 @@ body {
   @apply w-full rounded-lg border border-border bg-white px-4 py-3 text-sm outline-none transition-colors placeholder:text-text-muted/50 focus:border-primary focus:ring-2 focus:ring-primary/10;
 }
 
-/* Mobile navigation — fixed full viewport, evita colapso no iOS */
-.mobile-nav-root {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-}
-
-.mobile-nav-backdrop {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  border: none;
-  cursor: pointer;
-}
-
-.mobile-nav-panel {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  width: min(85vw, 18rem);
-  max-width: 100%;
-  height: 100dvh;
-  background: #0f0f0f;
-  box-shadow: -8px 0 32px rgba(0, 0, 0, 0.35);
-}
-
-@media (min-width: 1024px) {
-  .mobile-nav-root {
-    display: none !important;
-  }
-}
-
-html.mobile-nav-open header {
-  z-index: 50;
-}
-
 .highlight-box {
   @apply border-l-4 border-primary bg-surface/80 p-6 md:p-8;
 }

@@ -6,7 +6,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 const contacts = [
   { icon: Phone, label: "+55 (16) 99781-8855", href: "tel:+5516997818855" },
   { icon: Mail, label: "contato@rrpackaging.com.br", href: "mailto:contato@rrpackaging.com.br" },
-  { icon: MapPin, label: "Ribeirão Preto, SP — Atendimento nacional", href: undefined },
+  { icon: MapPin, label: "Monte Alto, SP", href: undefined },
 ];
 
 export function ContactSection() {

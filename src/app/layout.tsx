@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "R.R Packaging Parts | Peças e Soluções para Máquinas Envasadoras",
+  title: "R.R Packaging Parts | Nacionalização e reposição de peças para máquinas envasadoras",
   description:
     "R.R Packaging Parts: empresa séria, conservadora, forte e confiável. Peças e serviços para máquinas envasadoras horizontais e verticais. Stand Up Pouch, Stick Pack, Pillow Bag e mais.",
   keywords: [
