@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "R.R Packaging Parts ",
+  title: "RR Packaging Parts ",
   description:
     "R.R Packaging Parts: empresa séria, conservadora, forte e confiável. Peças e serviços para máquinas envasadoras horizontais e verticais. Stand Up Pouch, Stick Pack, Pillow Bag e mais.",
   keywords: [
