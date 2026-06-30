@@ -30,14 +30,14 @@ export function CTABanner() {
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
-            href="tel:+55 16 3190-4501"
+            href="tel:+5516997818855"
             className="inline-flex items-center gap-2 rounded-lg border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur-sm hover:bg-white/20"
           >
             <Phone className="h-4 w-4" />
-            +55 16 3190-4501
+            +55 16 99781-8855
           </a>
           <a
-            href="https://wa.me/+55 16 3190-4501"
+            href="https://wa.me/551631904501"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg bg-[#25d366] px-6 py-3 text-sm font-medium text-white hover:bg-[#20bd5a]"

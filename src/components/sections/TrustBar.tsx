@@ -13,7 +13,7 @@ const clients = [
   { name: "Vigor Alimentos", logo: "/images/clientes/vigor.svg" },
 ];
 
-const marqueeClients = [...clients, ...clients];
+const marqueeClients = Array.from({ length: 4 }, () => clients).flat();
 
 export function TrustBar() {
   return (
@@ -33,15 +33,15 @@ export function TrustBar() {
           {marqueeClients.map((client, i) => (
             <div
               key={`${client.name}-${i}`}
-              className="mx-10 flex h-12 shrink-0 items-center justify-center"
+              className="mx-8 flex h-14 w-40 shrink-0 items-center justify-center rounded-lg bg-white/80 px-3 md:mx-10 md:w-44"
               title={client.name}
             >
               <Image
                 src={client.logo}
                 alt={client.name}
-                width={140}
-                height={48}
-                className="h-10 w-auto max-w-[140px] object-contain opacity-70 grayscale transition-opacity hover:opacity-100 md:h-11"
+                width={160}
+                height={56}
+                className="h-10 w-full max-w-[160px] object-contain opacity-80 grayscale transition-opacity hover:opacity-100 hover:grayscale-0 md:h-11"
               />
             </div>
           ))}

@@ -70,12 +70,12 @@ export function Header() {
 
               <div className="border-t border-white/10 p-5">
                 <a
-                  href="tel:+55 16 3190-4501"
+                  href="tel:+5516997818855"
                   className="mb-3 flex items-center gap-2 text-sm text-white/80"
                   onClick={closeMenu}
                 >
                   <Phone className="h-4 w-4 text-accent" />
-                  +55 16 3190-4501
+                  +55 16 99781-8855
                 </a>
                 <a
                   href="#contato-form"
@@ -122,11 +122,11 @@ export function Header() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <a
-              href="tel:+55 16 3190-4501"
+              href="tel:+5516997818855"
               className="flex items-center gap-2 rounded-lg border border-white/15 px-4 py-2 text-sm text-white/80 transition-colors hover:border-white/30 hover:text-white"
             >
               <Phone className="h-4 w-4 text-accent" />
-              +55 16 3190-4501
+              +55 16 99781-8855
             </a>
             <a href="#contato-form" className="btn-primary !rounded-lg !px-5 !py-2.5 !text-xs">
               Orçamento

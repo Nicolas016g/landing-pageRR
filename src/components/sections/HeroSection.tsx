@@ -19,7 +19,6 @@ const painPoints = [
 
 const stats = [
   { value: "500+", label: "Peças no catálogo" },
-  { value: "24h", label: "Resposta média" },
   { value: "100%", label: "Foco industrial" },
 ];
 
@@ -67,7 +66,7 @@ export function HeroSection() {
           <div className="order-1 lg:order-2" id="contato-form">
             <p className="text-sm font-medium text-accent">R.R Packaging Parts</p>
             <h1 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl lg:text-[2.75rem]">
-              Nacionalização e reposição de peças para máquinas embaladoras envasadoras
+              Fabricação de peças importadas para máquinas embaladoras envasadoras
             </h1>
             <div className="mt-6">
               <LeadForm
@@ -125,7 +124,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="mt-10 grid grid-cols-3 gap-4 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm md:gap-8 md:p-8">
+        <div className="mt-10 grid grid-cols-2 gap-4 rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm md:gap-8 md:p-8">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-2xl font-semibold text-white md:text-3xl">{stat.value}</p>
