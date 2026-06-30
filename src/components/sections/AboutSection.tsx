@@ -2,7 +2,7 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 import { SectionHeader } from "../ui/SectionHeader";
 
 const pillars = [
-  { title: "Peças de precisão", text: "Catálogo amplo para envasadoras horizontais e verticais." },
+  { title: "Peças de precisão", text: "Catálogo amplo para embaladoras envasadoras horizontais e verticais." },
   { title: "Engenharia reversa", text: "Melhoria contínua e usinagem com rastreabilidade." },
   { title: "Suporte técnico", text: "Atendimento presencial ou remoto em todo o Brasil." },
 ];
@@ -16,7 +16,7 @@ export function AboutSection() {
             <SectionHeader
               eyebrow="Sobre"
               title="Especialistas em embalagem flexível"
-              subtitle="Empresa focada em peças e serviços para máquinas envasadoras, com atuação séria e soluções sob medida para a indústria."
+              subtitle="Empresa focada em peças e serviços para máquinas embaladoras envasadoras, com atuação séria e soluções sob medida para a indústria."
               align="left"
             />
           </ScrollReveal>

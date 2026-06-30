@@ -27,8 +27,8 @@ export function BenefitsSection() {
         <ScrollReveal>
           <SectionHeader
             eyebrow="Diferenciais"
-            title="Por que escolher a R.R Packaging Parts"
-            subtitle="Soluções personalizadas para quem precisa de peças e serviços para máquinas envasadoras."
+            title="Por que escolher a RR Packaging Parts"
+            subtitle="Soluções personalizadas para quem precisa de peças e serviços para máquinas embaladoras envasadoras."
             align="center"
           />
         </ScrollReveal>

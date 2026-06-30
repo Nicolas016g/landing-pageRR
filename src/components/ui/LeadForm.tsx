@@ -50,9 +50,7 @@ export function LeadForm({
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4 p-6">
-        {!compact && (
-          <input required type="text" placeholder="Nome completo" className="input-field" />
-        )}
+        <input required type="text" placeholder="Nome" className="input-field" />
         <input required type="email" placeholder="E-mail" className="input-field" />
         <input required type="tel" placeholder="Telefone / WhatsApp" className="input-field" />
         <select required className="input-field" defaultValue="">
@@ -75,7 +73,7 @@ export function LeadForm({
           ) : (
             <>
               <Send className="h-4 w-4" />
-              Enviar mensagem
+              Pedir orçamento
             </>
           )}
         </button>

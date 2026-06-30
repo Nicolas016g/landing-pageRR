@@ -5,7 +5,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 const solutions = [
   {
     name: "Peças",
-    desc: "Catálogo de peças para máquinas envasadoras. Stand Up Pouch, Stick Pack, Pillow Bag e mais.",
+    desc: "Catálogo de peças para máquinas embaladoras envasadoras. Stand Up Pouch, Stick Pack, Pillow Bag e mais.",
     icon: Package,
   },
   {
@@ -33,7 +33,7 @@ export function SolutionsSection() {
           <SectionHeader
             eyebrow="Soluções"
             title="O que oferecemos"
-            subtitle="Portfólio de peças e serviços para envasadoras horizontais e verticais."
+            subtitle="Portfólio de peças e serviços para embaladoras envasadoras horizontais e verticais."
             align="center"
           />
         </ScrollReveal>

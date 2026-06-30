@@ -67,7 +67,7 @@ export function HeroSection() {
           <div className="order-1 lg:order-2" id="contato-form">
             <p className="text-sm font-medium text-accent">R.R Packaging Parts</p>
             <h1 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl lg:text-[2.75rem]">
-              Nacionalização e reposição de peças para máquinas envasadoras
+              Nacionalização e reposição de peças para máquinas embaladoras envasadoras
             </h1>
             <div className="mt-6">
               <LeadForm
@@ -85,7 +85,7 @@ export function HeroSection() {
               Sua máquina depende de uma peça importada?
             </h2>
             <p className="mt-3 text-base font-medium text-accent">
-              Talvez exista uma solução mais rápida e eficiente: fabricação local.
+              Existe uma solução mais rápida e eficiente: fabricação local.
             </p>
 
             <p className="mt-5 text-sm leading-relaxed text-white/75">
@@ -103,7 +103,7 @@ export function HeroSection() {
             </ul>
 
             <p className="mt-5 text-sm leading-relaxed text-white/75">
-              A RR Packaging desenvolve e fabrica no Brasil peças comparáveis para máquinas embaladoras e
+              A RR Packaging desenvolve e fabrica no Brasil peças equivalentes para máquinas embaladoras e
               envasadoras FFS &amp; FS — substituindo componentes nacionais e principalmente importados com
               qualidade controlada, homologação dimensional e entrega previsível, para manter suas operações
               funcionando com mais segurança e agilidade.
