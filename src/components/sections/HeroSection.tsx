@@ -64,9 +64,9 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto max-w-7xl px-4 pt-4 pb-10 md:px-6 md:pt-6 md:pb-14">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-start lg:gap-12">
           <div className="order-1 lg:order-2" id="contato-form">
-            <p className="text-sm font-medium text-accent">R.R Packaging Parts</p>
+            <p className="text-sm font-medium text-accent">RR Packaging Parts</p>
             <h1 className="mt-3 text-3xl font-semibold leading-tight tracking-tight text-white md:text-4xl lg:text-[2.75rem]">
-              Fabricação de peças importadas para máquinas embaladoras envasadoras
+              Fabricação de peças importadas para máquinas embaladoras e envasadoras
             </h1>
             <div className="mt-6">
               <LeadForm
@@ -103,7 +103,7 @@ export function HeroSection() {
 
             <p className="mt-5 text-sm leading-relaxed text-white/75">
               A RR Packaging desenvolve e fabrica no Brasil peças equivalentes para máquinas embaladoras e
-              envasadoras FFS &amp; FS — substituindo componentes nacionais e principalmente importados com
+              envasadoras FFS &amp; FS, substituindo componentes nacionais e principalmente importados com
               qualidade controlada, homologação dimensional e entrega previsível, para manter suas operações
               funcionando com mais segurança e agilidade.
             </p>

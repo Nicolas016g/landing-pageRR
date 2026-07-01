@@ -100,7 +100,7 @@ export function Header() {
           <a href="#" className="flex shrink-0 items-center">
             <Image
               src="/images/logo-menu.svg"
-              alt="R.R Packaging Parts"
+              alt="RR Packaging Parts"
               width={150}
               height={32}
               className="h-8 w-auto"

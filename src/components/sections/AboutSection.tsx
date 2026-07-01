@@ -2,7 +2,7 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 import { SectionHeader } from "../ui/SectionHeader";
 
 const pillars = [
-  { title: "Peças de precisão", text: "Catálogo amplo para embaladoras envasadoras horizontais e verticais." },
+  { title: "Peças de precisão", text: "Catálogo amplo para embaladoras e envasadoras horizontais e verticais." },
   { title: "Engenharia reversa", text: "Melhoria contínua e usinagem com rastreabilidade." },
   { title: "Suporte técnico", text: "Atendimento presencial ou remoto em todo o Brasil." },
 ];

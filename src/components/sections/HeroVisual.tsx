@@ -20,7 +20,7 @@ export function HeroVisual() {
             <div className="h-2.5 w-2.5 bg-green-400" />
           </div>
           <span className="ml-2 text-xs font-semibold uppercase text-text-muted">
-            R.R Packaging — Painel
+            RR Packaging — Painel
           </span>
           <span className="ml-auto flex items-center gap-1 text-[10px] font-bold uppercase text-primary">
             <span className="h-1.5 w-1.5 animate-pulse bg-accent" />
