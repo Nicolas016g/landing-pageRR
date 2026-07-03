@@ -16,7 +16,7 @@ export function AboutSection() {
             <SectionHeader
               eyebrow="Sobre"
               title="Especialistas em embalagem flexível"
-              subtitle="Empresa focada em peças e serviços para máquinas embaladoras envasadoras, com atuação séria e soluções sob medida para a indústria."
+              subtitle="Empresa focada em peças e serviços para máquinas embaladoras e envasadoras, com atuação séria e soluções sob medida para a indústria."
               align="left"
             />
           </ScrollReveal>

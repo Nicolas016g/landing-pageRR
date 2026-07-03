@@ -20,7 +20,7 @@ export function CTABanner() {
             Entre em contato e fale com um especialista
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-white/80">
-            Orçamentos, suporte técnico e soluções para máquinas embaladoras envasadoras horizontais e verticais.
+            Orçamentos, suporte técnico e soluções para máquinas embaladoras e envasadoras horizontais e verticais.
           </p>
         </ScrollReveal>
 

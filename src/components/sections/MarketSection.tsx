@@ -31,7 +31,7 @@ export function MarketSection() {
           <SectionHeader
             eyebrow="Estrutura"
             title="Infraestrutura para a indústria"
-            subtitle="Estoque, usinagem e nacionalização de componentes para máquinas de envase."
+            subtitle="Estoque, usinagem e nacionalização de componentes para máquinas de envase e embalagem."
             align="center"
           />
         </ScrollReveal>
