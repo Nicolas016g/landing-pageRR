@@ -19,6 +19,15 @@ type FormState = {
   _gotcha: string;
 };
 
+const TO_EMAIL = "mkt.rrpackaging@gmail.com";
+
+const INTEREST_LABELS: Record<string, string> = {
+  pecas: "Peças",
+  servicos: "Serviços técnicos",
+  suporte: "Suporte e retrofit",
+  treinamento: "Treinamentos",
+};
+
 const initialForm: FormState = {
   name: "",
   email: "",
@@ -51,17 +60,40 @@ export function LeadForm({
     setLoading(true);
     setError(null);
 
+    if (!form.name.trim() || !form.email.trim() || !form.phone.trim() || !form.interest) {
+      setError("Preencha todos os campos obrigatórios.");
+      setLoading(false);
+      return;
+    }
+
+    const interestLabel = INTEREST_LABELS[form.interest] ?? form.interest;
+
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
+      const res = await fetch(
+        `https://formsubmit.co/ajax/${encodeURIComponent(TO_EMAIL)}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            _subject: `Novo lead - RR Packaging (${interestLabel})`,
+            _template: "table",
+            _captcha: "false",
+            name: form.name.trim(),
+            email: form.email.trim(),
+            phone: form.phone.trim(),
+            interesse: interestLabel,
+            message: form.message.trim() || "(sem mensagem)",
+          }),
+        },
+      );
 
-      const data = (await res.json()) as { error?: string };
+      const data = (await res.json()) as { success?: string; message?: string };
 
-      if (!res.ok) {
-        throw new Error(data.error ?? "Não foi possível enviar.");
+      if (!res.ok || !data.success) {
+        throw new Error(data.message ?? "Não foi possível enviar.");
       }
 
       setSent(true);
