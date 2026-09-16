@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 
@@ -38,6 +39,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body className="antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-18190736488"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18190736488');`}
+        </Script>
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NC8MRCC3"
