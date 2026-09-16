@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 const TO_EMAIL = "mkt.rrpackaging@gmail.com";
+const CC_EMAILS = "renatoramalho@rrpackaging.com.br";
 
 const INTEREST_LABELS: Record<string, string> = {
   pecas: "Peças",
@@ -84,6 +85,7 @@ export async function POST(request: Request) {
           _subject: `Novo lead - RR Packaging (${interestLabel})`,
           _template: "table",
           _captcha: "false",
+          _cc: CC_EMAILS,
           name,
           email,
           phone,

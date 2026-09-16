@@ -20,6 +20,7 @@ type FormState = {
 };
 
 const TO_EMAIL = "mkt.rrpackaging@gmail.com";
+const CC_EMAILS = "renatoramalho@rrpackaging.com.br";
 
 const INTEREST_LABELS: Record<string, string> = {
   pecas: "Peças",
@@ -81,6 +82,7 @@ export function LeadForm({
             _subject: `Novo lead - RR Packaging (${interestLabel})`,
             _template: "table",
             _captcha: "false",
+            _cc: CC_EMAILS,
             name: form.name.trim(),
             email: form.email.trim(),
             phone: form.phone.trim(),
